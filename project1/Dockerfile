@@ -2,8 +2,8 @@ FROM tomcat:8.0-alpine
 
 MAINTAINER  khadeshailendra@gmail.com
 
-ADD sample.war /usr/local/tomcat/webapps/
+RUN rm -rf /usr/local/tomcat/ROOT
 
-EXPOSE 8082
+ADD sample.war /usr/local/tomcat/webapps/
 
 CMD ["catalina.sh", "run"]
