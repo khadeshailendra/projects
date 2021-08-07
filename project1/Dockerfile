@@ -4,6 +4,6 @@ MAINTAINER  khadeshailendra@gmail.com
 
 RUN rm -rf /usr/local/tomcat/ROOT
 
-ADD sample.war /usr/local/tomcat/webapps/
+ADD target/sample.war /usr/local/tomcat/webapps/
 
 CMD ["catalina.sh", "run"]
